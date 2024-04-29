@@ -1,0 +1,93 @@
+{
+  "id": "fd1e527f-f9bf-4de5-ab21-0495aaede64a",
+  "area_id": "804b9408-12f1-453c-b7ab-01bb544f0824",
+  "parent_id": null,
+  "code": "STIDIF-PROTOTYPE",
+  "name": "Class-1301",
+  "timezone": null,
+  "status": null,
+  "last_data": null,
+  "extra_data": {
+      "type": "room",
+      "modules": [
+          {
+              "code": "Counting"
+          },
+          {
+              "code": "Monitoring"
+          }
+      ]
+  },
+  "created_at": "2024-04-22T08:29:25.889Z",
+  "updated_at": "2024-04-22T08:29:25.889Z",
+  "attributes": {
+      "data": [
+          {
+              "code": "cctv_people",
+              "name": "People",
+              "type": [
+                  "read"
+              ],
+              "options": {
+                  "resample": "max",
+                  "type_data": "number",
+                  "show_detail": "bar",
+                  "show_report": true,
+                  "show_realtime": true
+              }
+          },
+          {
+              "code": "smart_plug",
+              "name": "smart plug",
+              "type": [
+                  "read",
+                  "control"
+              ],
+              "options": {
+                  "type_data": "boolean",
+                  "show_report": true,
+                  "show_realtime": true
+              }
+          },
+          {
+              "code": "3_gang_saklar1",
+              "name": "Saklar 1",
+              "type": [
+                  "read",
+                  "control"
+              ],
+              "options": {
+                  "type_data": "boolean",
+                  "show_report": true,
+                  "show_realtime": true
+              }
+          },
+          {
+              "code": "3_gang_saklar2",
+              "name": "Saklar 2",
+              "type": [
+                  "read",
+                  "control"
+              ],
+              "options": {
+                  "type_data": "boolean",
+                  "show_report": true,
+                  "show_realtime": true
+              }
+          },
+          {
+              "code": "3_gang_saklar3",
+              "name": "Saklar 3",
+              "type": [
+                  "read",
+                  "control"
+              ],
+              "options": {
+                  "type_data": "boolean",
+                  "show_report": true,
+                  "show_realtime": true
+              }
+          }
+      ]
+  }
+}

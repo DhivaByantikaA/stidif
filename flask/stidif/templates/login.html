@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login - STIDIF</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>  
+        <form class="my-form" method="POST" action="{{ url_for('login') }}" id="loginForm">
+            <div class="login-welcome-row">
+                <img src="{{ url_for('static', filename='logo.png') }}" class="logo-login">
+
+                <h1>Welcome</h1>
+                <p>please enter your details!</p>
+            </div>
+            <div class="input_wrapper">
+                <input
+                    type="email" id="email" name="email" class="input_field"
+                    placeholder="Your Email" required
+                >
+                <label for="email" class="input_label">Email</label>
+            </div>
+            <div class="input_wrapper">
+                <input id="password" type="password" name="password" class="input_field"
+                    placeholder="Your Password"
+                    title="Minimum 6 characters at least 1 Alphabet and 1 Number">
+                <label for="password" class="input_label">
+                    Password
+                </label>
+            </div>
+            <button type="submit" id="loginButton" class="my-form_button">Login</button>
+            </button>
+        </form>
+        <script src="{{ url_for('static', filename='login.js') }}"></script>
+    </body>

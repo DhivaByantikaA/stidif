@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Frontend Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.8/mqtt.min.js"></script>
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        // Connect to MQTT broker
+        const client = mqtt.connect('wss://mps.envisions.id/ws', {'username': 'digimqtt','password':'pahlawan10'});
+
+        // Subscribe to the topic
+        client.on('connect', function () {
+            console.log('Connected to MQTT broker');
+            client.subscribe('/STIDIF/STIDIF-PROTOTYPE');
+        });
+
+        // Handle incoming messages
+        client.on('message', function (topic, message) {
+            // Update the frontend with the received message
+            document.getElementById('message').innerText = `Received message: ${message.toString()}`;
+        });
+    </script>
+</body>
+</html>

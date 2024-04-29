@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>STIDIF</title>
+   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>
+   
+</style>
+<body>
+      <div class="sidebar">
+         <div class="sidebar-brand">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo-dashboard">
+         </div>
+         
+         <div class="sidebar-menu">
+            <ul>
+               <li>
+                      <a href="{{ url_for('get_assets',token='YOUR_TOKEN')}}" id="asset"><span class=""></span>
+                        <span>class-1401</span></a>
+               </li>
+               <li>
+                  <a href="{{ url_for('logout') }}"><span class=""></span><span>Logout</span></a>
+              </li>
+                
+             </ul>
+         </div>
+        </div>
+
+      <div class="main-content">
+         <header>
+            <h2>               
+               Dashboard
+            </h2>
+
+         <div class="content">
+            <a href="{{ url_for('dashboard')}}"><span class=""></span>
+               <span>Home</span></a>
+               
+         </div>
+</body>
+<script>
+   // use token from api
+   const token = localStorage.getItem('loginToken')
+   const asset = document.getElementById('asset')
+   asset.href = asset.href.replace('YOUR_TOKEN',token)
+</script>
+</html>
